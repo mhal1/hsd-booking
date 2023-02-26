@@ -18,10 +18,22 @@
     font-size: 14pt;
 }
 
-.hsd {
-    font-size: 17pt;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+@media screen and (max-width: 400px) {
+    .hsd {
+        margin-top: 20px;
+        font-size: 17pt;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
 }
+
+@media screen and (min-width: 400px) {
+    .hsd {
+        font-size: 17pt;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+}
+
+
 
 .booking {
     font-size: 8pt;
