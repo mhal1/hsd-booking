@@ -28,6 +28,6 @@ export class AppointmentsService {
   }
 
   getAllAppointments(){
-    return this.http.get(APPOINTMENTS_API + 'get-all-appointments');
+    return this.http.get(APPOINTMENTS_API + 'get-all-appointments')
   }
 }
