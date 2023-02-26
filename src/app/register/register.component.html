@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="registerHeading">Registration</div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="!isSuccessful">
+        <p>
+            <mat-form-field appearance="outline" class="emailStyle" [hideRequiredMarker]="true">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Enter your user name..." formControlName="username">
+                <mat-error *ngIf="form.controls['username'].invalid">Min 3 characters</mat-error>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline" class="emailStyle" [hideRequiredMarker]="true">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Enter your email..." formControlName="email">
+                <mat-error *ngIf="form.controls['email'].invalid">Min 3 characters</mat-error>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline" class="passwordStyle" [hideRequiredMarker]="true">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput placeholder="Enter your password..." formControlName="password">
+                <mat-error *ngIf="form.controls['password'].invalid">Min 6 characters</mat-error>
+            </mat-form-field>
+        </p>
+        <div class="bottom-panel">
+            <button color="primary" mat-flat-button color="primary" type="submit" [disabled]="!form.valid">SUBMIT</button>
+        
+        </div>
+    </form>
+    <div *ngIf="isSuccessful">
+        Thank you for registering with Artizan. Please check your email and verify your account to begin.
+        <p class="loginButton">
+            <button class="bookButton" mat-stroked-button color="primary" type="submit"
+                [routerLink]="['/login']"><strong>LOGIN</strong></button>
+        </p>
+    </div>
+    <div *ngIf="isSignUpFailed">
+        Try again
+        
+    </div>
+</div>

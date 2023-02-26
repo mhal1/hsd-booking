@@ -1,1 +1,124 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$hsd-booking-client-primary: mat.define-palette(mat.$blue-gray-palette, 100, 300, 300);
+$hsd-booking-client-accent: mat.define-palette(mat.$yellow-palette, 100, 400, 700);
+
+// The warn palette is optional (defaults to red).
+$hsd-booking-client-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$hsd-booking-client-theme: mat.define-light-theme((color: (primary: $hsd-booking-client-primary,
+        accent: $hsd-booking-client-accent,
+        warn: $hsd-booking-client-warn,
+      )));
+
+$form-field-primary: mat.define-palette(mat.$blue-palette);
+$form-field-accent: mat.define-palette(mat.$yellow-palette);
+
+// The warn palette is optional (defaults to red).
+$form-field-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$form-field-theme: mat.define-light-theme((color: (primary: $form-field-primary,
+        accent: $form-field-accent,
+        warn: $form-field-warn,
+      )));
+
+$buttons-primary: mat.define-palette(mat.$blue-gray-palette);
+$buttons-accent: mat.define-palette(mat.$yellow-palette);
+
+// The warn palette is optional (defaults to red).
+$buttons-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$buttons-theme: mat.define-light-theme((color: (primary: $buttons-primary,
+        accent: $buttons-accent,
+        warn: $buttons-warn,
+      )));
+
+$side-primary: mat.define-palette(mat.$blue-palette);
+$side-accent: mat.define-palette(mat.$yellow-palette);
+
+// The warn palette is optional (defaults to red).
+$side-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$side-theme: mat.define-light-theme((color: (primary: $side-primary,
+        accent: $side-accent,
+        warn: $side-warn,
+      )));
+
+$date-primary: mat.define-palette(mat.$blue-palette);
+$date-accent: mat.define-palette(mat.$yellow-palette);
+
+// The warn palette is optional (defaults to red).
+$date-warn: mat.define-palette(mat.$red-palette);
+
+
+$typography: mat.define-typography-level(
+    $font-family: ('Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif),
+    $font-weight: 400,
+    $font-size: 1rem,
+    $line-height: 1,
+    $letter-spacing: normal,
+  );
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$date-theme: mat.define-light-theme((color: (primary: $side-primary,
+        accent: $side-accent,
+        warn: $side-warn,
+      ),
+      typography: $typography
+    ));
+
+
+
+
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+//@include mat.all-component-themes($hsd-booking-client-theme);
+
+@include mat.core-theme($hsd-booking-client-theme);
+
+@include mat.form-field-theme($form-field-theme);
+@include mat.button-theme($buttons-theme);
+
+@include mat.sidenav-theme($side-theme);
+
+@include mat.card-theme($side-theme);
+
+@include mat.autocomplete-theme($side-theme);
+
+@include mat.button-toggle-theme($side-theme);
+
+@include mat.datepicker-theme($date-theme);
+
+
+
+
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: 'Playfair Display';
+}

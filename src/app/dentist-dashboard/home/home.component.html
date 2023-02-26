@@ -1,0 +1,20 @@
+<mat-card class="formCard">
+    <mat-card-content class="tablesLayout">
+        <h2>Up coming appointments:</h2>
+        <mat-card class="appointmentCard" *ngFor="let ap of appointments">
+            <mat-card-header>
+                <p >
+                    {{ap.date | date: 'dd/MM/yyyy'}} - {{ap.time}}
+        
+                </p>
+            </mat-card-header>
+            <mat-card-content class="tablesLayout" >
+                <p >
+                    {{ap.treatment}}
+        
+                </p>
+            </mat-card-content>
+        </mat-card>
+        
+    </mat-card-content>
+</mat-card>

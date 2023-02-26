@@ -1,0 +1,40 @@
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <p routerLink="/dashboard/home" class="menuTitle">Dashboard</p>
+        <p routerLink="/dashboard/home" class="innerMenuItem">Home</p>
+        <p routerLink="/dashboard/view-schedule" class="innerMenuItem">Schedule</p>
+        <p routerLink="/dashboard/treatments" class="innerMenuItem">Treatments</p>
+        <p routerLink="/dashboard/profile" class="innerMenuItem">Profile</p>
+        <p routerLink="/dashboard/report" class="innerMenuItem">Report</p>
+        <!-- <p class="menuItem" (click)="showMaintenance = !showMaintenance">
+            Maintenance
+            <mat-icon *ngIf="!showMaintenance" fontIcon="keyboard_arrow_down"></mat-icon>
+            <mat-icon *ngIf="showMaintenance" fontIcon="keyboard_arrow_up"></mat-icon>
+        </p>
+        <p routerLink="/users" class="innerMenuItem" *ngIf="showMaintenance">Users</p>
+        <p routerLink="/event-types" class="innerMenuItem" *ngIf="showMaintenance">Event Types</p>
+        <p class="menuItem" (click)="showCustomerComplaints = !showCustomerComplaints">
+            Customer Complaints
+            <mat-icon *ngIf="!showCustomerComplaints" fontIcon="keyboard_arrow_down"></mat-icon>
+            <mat-icon *ngIf="showCustomerComplaints" fontIcon="keyboard_arrow_up"></mat-icon>
+        </p>
+        <p routerLink="/form" class="innerMenuItem" *ngIf="showCustomerComplaints">Form</p>
+        <p routerLink="/search" class="innerMenuItem" *ngIf="showCustomerComplaints">Search</p>
+        <p routerLink="/investigations" class="innerMenuItem" *ngIf="showCustomerComplaints">Investigations</p> -->
+    </mat-drawer>
+
+    <div class="sidenav-content">
+        <div >
+            <span class="toggleSideNavButton" type="button" (click)="drawer.toggle(); drawerOpen = !drawerOpen;">
+                <mat-icon *ngIf="!drawerOpen" fontIcon="menu"></mat-icon>
+                <mat-icon *ngIf="drawerOpen" fontIcon="close"></mat-icon>
+            </span>
+            <span class="push">
+                {{title}}
+            </span>
+        </div>
+
+        
+        <router-outlet></router-outlet>
+    </div>
+</mat-drawer-container>

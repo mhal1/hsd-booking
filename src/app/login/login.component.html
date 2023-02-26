@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="welcomeHeading">Welcome</div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <p>
+            <mat-form-field appearance="outline" class="emailStyle" color="primary">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Enter your email..." formControlName="username">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline" class="passwordStyle">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput placeholder="Enter your password..." formControlName="password">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            </mat-form-field>
+        </p>
+        <div class="bottom-panel">
+            <button class="bookButton" mat-stroked-button color="primary" type="submit"><strong>LOGIN</strong></button>
+            <button class="aboutUsButton" mat-stroked-button color="primary" [routerLink]="['/register']">REGISTER</button>
+            
+        </div>
+        <button class="guestButton" mat-button [routerLink]="['/guest-booking']">Continue as guest</button>
+
+    </form>
+</div>

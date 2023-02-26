@@ -1,0 +1,19 @@
+<mat-card class="formCard">
+    <mat-card-content class="tablesLayout">
+        <h3>
+            <strong>{{ currentUser.username }}</strong> Profile
+        </h3>
+
+        <p>
+            <strong>Email:</strong>
+            {{ currentUser.email }}
+        </p>
+        <strong>Roles:</strong>
+        <ul>
+            <li *ngFor="let role of currentUser.roles">
+                {{ role }}
+            </li>
+        </ul>
+
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,36 @@
+<mat-card class="formCard">
+    <mat-card-content class="tablesLayout">
+        <p>
+            Treatments
+        </p>
+        <div class="options">
+            <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+                <mat-button-toggle value="Family Dentistry">Family Dentistry</mat-button-toggle>
+                <mat-button-toggle value="Orthodontics">Orthodontics</mat-button-toggle>
+                <mat-button-toggle value="Implants">Implants</mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+
+
+        <form class="example-form">
+            <mat-form-field class="subOptions" appearance="outline">
+                <mat-label>Options:</mat-label>
+                <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl"
+                    [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option.description">
+                        {{option.description}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Fee</mat-label>
+                <span matPrefix>&nbsp; &nbsp; £ &nbsp;</span>
+                <input type="tel" matInput placeholder="0.00">
+              </mat-form-field>
+        </form>
+
+
+
+    </mat-card-content>
+</mat-card>

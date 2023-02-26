@@ -1,0 +1,86 @@
+.formCard {
+    margin: 40px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.innerFormCard {
+    width: 300px !important;
+    margin: 40px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.addEventTypesCard {
+    width: 200px;
+}
+
+.displayEventTypesTable {
+    width: 60% !important;
+}
+
+
+.tablesLayout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formFieldColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.addButton {}
+
+.eventNameStyle {
+    margin-bottom: 10px;
+}
+
+mat-form-field {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 450px;
+}
+
+.headingBooking {
+    display: flex;
+    flex-direction: column;
+    font-size: 20pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+
+.formStyle {
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.bookButton {
+    width: 80%;
+    height: 40px;
+    margin-right: 10px;
+    border: 2px solid black !important;
+    color: black !important;
+    font-size: 14pt;
+}
+
+mat-datepicker{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+}
+
+mat-option{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+}
+
+button.example-custom-date-class {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    background: orange;
+    border-radius: 100%;
+  }

@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span class="hsd">Heath Street Dental <span class="booking">Booking</span></span>
+        <span class="spacer"></span>
+
+        <!-- <button class="bookButton" mat-stroked-button color="primary" [routerLink]="['/login']"
+            *ngIf="!isLoggedIn"><strong>LOGIN</strong></button> -->
+        <span *ngIf="isLoggedIn" class="end">
+            <button mat-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="userBtn">
+                <span class="username">{{username}}</span>
+                <mat-icon>person</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="logout()">
+                    <mat-icon>exit_to_app</mat-icon>
+                    <span>Logout</span>
+                </button>
+
+            </mat-menu>
+        </span>
+
+    </mat-toolbar-row>
+</mat-toolbar>

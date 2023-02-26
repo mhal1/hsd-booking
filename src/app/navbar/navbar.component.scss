@@ -1,0 +1,52 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.bookButton {
+    height: 30px;
+    margin-right: 10px;
+    border: 2px solid black !important;
+    color: black !important;
+    font-size: 14pt;
+}
+
+.aboutUsButton {
+    height: 30px;
+    border: 2px solid black !important;
+    color: white !important;
+    background-color: black !important;
+    font-size: 14pt;
+}
+
+.hsd {
+    font-size: 17pt;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.booking {
+    font-size: 8pt;
+}
+
+.profile {
+    font-size: 10pt;
+    margin-left: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+mat-toolbar {
+    overflow: hidden;
+}
+
+// .end {
+//     margin-right: 30px;
+// }
+
+.username {
+    font-size: 12pt;
+}
+.userBtn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
